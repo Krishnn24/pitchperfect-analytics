@@ -1,73 +1,134 @@
-# Welcome to your Lovable project
+<div align="center">
 
-## Project info
+# 🚀 PitchEstate  
+### PitchPerfect Analytics Platform
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+A **cross-platform analytics & pitch-generation platform** for founders, startups, and real-estate professionals.
 
-## How can I edit this code?
+🌐 **Live App** → https://pitchperfect-analytics-ten.vercel.app/
 
-There are several ways of editing your application.
+</div>
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 📌 Overview
 
-Changes made via Lovable will be committed automatically to this repo.
+**PitchEstate** helps users create **data-driven pitches**, analyze performance, and manage insights through a modern dashboard.  
+The application runs as a **web platform** and is also packaged as an **Android app using WebView**, ensuring reach across devices with a single codebase.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✨ Key Features
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 🧠 Pitch Creation
+- Structured pitch inputs
+- Clean, investor-friendly flow
+- Designed for clarity and consistency
 
-Follow these steps:
+### 📊 Analytics Dashboard
+- Performance insights
+- ROI and growth tracking
+- Card-based, easy-to-scan UI
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🗂 Pitch Management
+- Centralized pitch listing
+- Individual pitch analytics
+- Historical tracking
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🌍 Cross-Platform Support
+- 🌐 Web (desktop & mobile browsers)
+- 📱 Android (Jetpack Compose + WebView)
+- Single deployed production source
 
-# Step 3: Install the necessary dependencies.
-npm i
+### ⚡ Fast & Lightweight
+- Vite-powered frontend
+- Instant updates reflected in Android app
+- Optimized for demos and MVPs
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## 📸 Screenshots
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Web Application
+![Web Dashboard](screenshots/Screenshot_20260131_081906.png)
+![Web Analytics](screenshots/Screenshot_20260131_081930.png)
 
-**Use GitHub Codespaces**
+### Android Application (WebView)
+![Android Dashboard](screenshots/Screenshot_20260131_082003.png)
+![Android Analytics](screenshots/Screenshot_20260131_082140.png)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🛠 Tech Stack
 
-This project is built with:
-
-- Vite
-- TypeScript
+### Frontend (Web)
 - React
-- shadcn-ui
+- TypeScript
+- Vite
 - Tailwind CSS
+- shadcn/ui
 
-## How can I deploy this project?
+### Mobile (Android)
+- Kotlin
+- Jetpack Compose
+- Android WebView
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+### Tooling & Hosting
+- GitHub
+- Vercel https://pitchperfect-analytics-ten.vercel.app/
 
-## Can I connect a custom domain to my Lovable project?
+- Node.js / npm
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## ⚙️ Run Locally (Web)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Krishnn24/pitchperfect-analytics.git
+cd pitchperfect-analytics
+📱 Android App
+
+The Android app is a native wrapper around the production web application.
+
+Why WebView?
+
+Single codebase
+
+Faster development
+
+Instant updates without Play Store redeploy
+
+Ideal for MVPs and hackathons
+
+Run Android App
+
+Open project in Android Studio
+
+Sync Gradle
+
+Select emulator or device
+
+💡 Use Cases
+
+🏢 Real-estate pitch analysis
+
+🚀 Startup pitch preparation
+
+📈 Investor analytics dashboards
+
+📱 Mobile-first demos
+
+🧪 Rapid MVP & hackathon builds
+
+🔮 Future Enhancements
+
+User authentication
+
+PDF / PPT pitch export
+
+Offline Android support
+
+Fully native mobile UI
+
+Advanced analytics reports
