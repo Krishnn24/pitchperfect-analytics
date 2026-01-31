@@ -49,11 +49,11 @@ The application runs as a **web platform** and is also packaged as an **Android 
 
 ## 📸 Screenshots
 
-### Web Application
+### Android Application (WebView)
 ![Web Dashboard](screenshots/Screenshot_20260131_081906.png)
 ![Web Analytics](screenshots/Screenshot_20260131_081930.png)
 
-### Android Application (WebView)
+
 ![Android Dashboard](screenshots/Screenshot_20260131_082003.png)
 ![Android Analytics](screenshots/Screenshot_20260131_082140.png)
 
