@@ -12,6 +12,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { ArrowLeft, Download, RefreshCw, Edit, MapPin, Building, Target, Clock } from "lucide-react";
 import { Json } from "@/integrations/supabase/types";
+import jsPDF from "jspdf";
 
 interface Pitch {
   id: string;
@@ -80,19 +81,55 @@ const PitchDetail = () => {
     fetchPitch();
   }, [id, user, navigate, toast]);
 
-  const handleDownload = () => {
-    toast({
-      title: "Download Started",
-      description: "Your PowerPoint presentation is being generated...",
-    });
-    // In production, this would trigger actual PPT generation
-    setTimeout(() => {
-      toast({
-        title: "Download Ready",
-        description: "Pitch deck has been downloaded successfully.",
-      });
-    }, 2000);
-  };
+ const handleDownload = () => {
+  if (!pitch) return;
+
+  const doc = new jsPDF();
+
+  // Title
+  doc.setFontSize(20);
+  doc.text("Pitch Deck", 20, 20);
+
+  doc.setFontSize(12);
+  doc.text(`City: ${pitch.city}`, 20, 40);
+  doc.text(`Locality: ${pitch.locality ?? "N/A"}`, 20, 50);
+  doc.text(`Property Type: ${pitch.property_type}`, 20, 60);
+  doc.text(`Client Goal: ${pitch.client_goal}`, 20, 70);
+
+  doc.line(20, 80, 190, 80);
+
+  doc.setFontSize(14);
+  doc.text("Market Insights", 20, 95);
+
+  doc.setFontSize(11);
+  doc.text(
+    `Current Market Rate: ₹${pitch.market_rate ?? "N/A"} per sq ft`,
+    20,
+    110
+  );
+
+  doc.addPage();
+
+  doc.setFontSize(16);
+  doc.text("Insights Summary", 20, 20);
+
+  doc.setFontSize(11);
+  doc.text(
+    pitch.insights
+      ? JSON.stringify(pitch.insights, null, 2)
+      : "No insights available.",
+    20,
+    35,
+    { maxWidth: 170 }
+  );
+
+  doc.save("pitch-deck.pdf");
+
+  toast({
+    title: "Download complete",
+    description: "Pitch deck downloaded as PDF.",
+  });
+};
 
   const handleRegenerate = async () => {
     toast({
